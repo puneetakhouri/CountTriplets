@@ -15,6 +15,8 @@ func TestCountTriplets(t *testing.T) {
 		{[]int{3, 2, 1}, 1},
 		{[]int{1, 2, 3}, 1},
 		{[]int{1, 3, 5, 7, 9, 4}, 4},
+		{[]int{1, 3, 4, 15, 19}, 2},
+		{[]int{7, 2, 5, 4, 3, 6, 1, 9, 10, 12}, 18},
 	}
 
 	for _, data := range testData {
