@@ -5,8 +5,9 @@ import "fmt"
 func main() {
 
 	//arr := []int{1, 5, 3, 2}
-	arr := []int{1, 2, 3}
+	//arr := []int{1, 2, 3}
 	//arr := []int{3, 2, 7}
+	arr := []int{1, 3, 5, 7, 9, 4}
 	count := CountTriplets(arr)
 
 	if count > 0 {
