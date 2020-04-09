@@ -17,7 +17,11 @@ func main() {
 	}
 }
 
-//CountTriplets test
+//CountTriplets Currently does it in O(n²). Array elements are maintained in a map
+//and then processed. For every element of array, its equivalent map entry is (array item, index).
+//For every sum of pairs that is added, it is initially kept with value (sum , -1)
+//Once that sum pair has been found as an element, then that sum is updated to (sum, -2)
+//so that the code does not count it again.
 func CountTriplets(arr []int) int {
 	var dataMap = make(map[int]int)
 	count := 0
@@ -46,9 +50,9 @@ func CountTriplets(arr []int) int {
 				dataMap[sum] = -1
 			}
 
-			for key, value := range dataMap {
-				fmt.Printf("key=%d, value=%d\n", key, value)
-			}
+			// for key, value := range dataMap {
+			// 	fmt.Printf("key=%d, value=%d\n", key, value)
+			// }
 			fmt.Println()
 		}
 	}
